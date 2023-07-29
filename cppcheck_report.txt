@@ -1,0 +1,530 @@
+MQTTClient-C/samples/FreeRTOS/MQTTEcho.c:35:15: style: Variable 'pvParameters' is assigned a value that is never used. [unreadVariable]
+ pvParameters = 0;
+              ^
+MQTTClient-C/src/MQTTClient.c:134:24: style: Suspicious condition (assignment + comparison); Clarify expression with parentheses. [clarifyCondition]
+    if (rem_len > 0 && (rc = c->ipstack->mqttread(c->ipstack, c->readbuf + len, rem_len, TimerLeftMS(timer)) != rem_len)) {
+                       ^
+MQTTClient-C/src/MQTTClient.c:57:33: style:inconclusive: Function 'MQTTClientInit' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+void MQTTClientInit(MQTTClient* c, Network* network, unsigned int command_timeout_ms,
+                                ^
+MQTTClient-C/src/MQTTClient.h:144:43: note: Function 'MQTTClientInit' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport void MQTTClientInit(MQTTClient* client, Network* network, unsigned int command_timeout_ms,
+                                          ^
+MQTTClient-C/src/MQTTClient.c:57:33: note: Function 'MQTTClientInit' argument 1 names different: declaration 'client' definition 'c'.
+void MQTTClientInit(MQTTClient* c, Network* network, unsigned int command_timeout_ms,
+                                ^
+MQTTClient-C/src/MQTTClient.c:341:27: style:inconclusive: Function 'MQTTYield' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTYield(MQTTClient* c, int timeout_ms)
+                          ^
+MQTTClient-C/src/MQTTClient.h:213:37: note: Function 'MQTTYield' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTYield(MQTTClient* client, int time);
+                                    ^
+MQTTClient-C/src/MQTTClient.c:341:27: note: Function 'MQTTYield' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTYield(MQTTClient* c, int timeout_ms)
+                          ^
+MQTTClient-C/src/MQTTClient.c:341:34: style:inconclusive: Function 'MQTTYield' argument 2 names different: declaration 'time' definition 'timeout_ms'. [funcArgNamesDifferent]
+int MQTTYield(MQTTClient* c, int timeout_ms)
+                                 ^
+MQTTClient-C/src/MQTTClient.h:213:49: note: Function 'MQTTYield' argument 2 names different: declaration 'time' definition 'timeout_ms'.
+DLLExport int MQTTYield(MQTTClient* client, int time);
+                                                ^
+MQTTClient-C/src/MQTTClient.c:341:34: note: Function 'MQTTYield' argument 2 names different: declaration 'time' definition 'timeout_ms'.
+int MQTTYield(MQTTClient* c, int timeout_ms)
+                                 ^
+MQTTClient-C/src/MQTTClient.c:413:40: style:inconclusive: Function 'MQTTConnectWithResults' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTConnectWithResults(MQTTClient* c, MQTTPacket_connectData* options, MQTTConnackData* data)
+                                       ^
+MQTTClient-C/src/MQTTClient.h:152:50: note: Function 'MQTTConnectWithResults' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTConnectWithResults(MQTTClient* client, MQTTPacket_connectData* options,
+                                                 ^
+MQTTClient-C/src/MQTTClient.c:413:40: note: Function 'MQTTConnectWithResults' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTConnectWithResults(MQTTClient* c, MQTTPacket_connectData* options, MQTTConnackData* data)
+                                       ^
+MQTTClient-C/src/MQTTClient.c:468:29: style:inconclusive: Function 'MQTTConnect' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTConnect(MQTTClient* c, MQTTPacket_connectData* options)
+                            ^
+MQTTClient-C/src/MQTTClient.h:160:39: note: Function 'MQTTConnect' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTConnect(MQTTClient* client, MQTTPacket_connectData* options);
+                                      ^
+MQTTClient-C/src/MQTTClient.c:468:29: note: Function 'MQTTConnect' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTConnect(MQTTClient* c, MQTTPacket_connectData* options)
+                            ^
+MQTTClient-C/src/MQTTClient.c:517:42: style:inconclusive: Function 'MQTTSubscribeWithResults' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTSubscribeWithResults(MQTTClient* c, const char* topicFilter, enum QoS qos,
+                                         ^
+MQTTClient-C/src/MQTTClient.h:193:52: note: Function 'MQTTSubscribeWithResults' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTSubscribeWithResults(MQTTClient* client, const char* topicFilter, enum QoS, messageHandler, MQTTSubackData* data);
+                                                   ^
+MQTTClient-C/src/MQTTClient.c:517:42: note: Function 'MQTTSubscribeWithResults' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTSubscribeWithResults(MQTTClient* c, const char* topicFilter, enum QoS qos,
+                                         ^
+MQTTClient-C/src/MQTTClient.c:565:31: style:inconclusive: Function 'MQTTSubscribe' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTSubscribe(MQTTClient* c, const char* topicFilter, enum QoS qos,
+                              ^
+MQTTClient-C/src/MQTTClient.h:184:41: note: Function 'MQTTSubscribe' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTSubscribe(MQTTClient* client, const char* topicFilter, enum QoS, messageHandler);
+                                        ^
+MQTTClient-C/src/MQTTClient.c:565:31: note: Function 'MQTTSubscribe' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTSubscribe(MQTTClient* c, const char* topicFilter, enum QoS qos,
+                              ^
+MQTTClient-C/src/MQTTClient.c:573:33: style:inconclusive: Function 'MQTTUnsubscribe' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTUnsubscribe(MQTTClient* c, const char* topicFilter)
+                                ^
+MQTTClient-C/src/MQTTClient.h:200:43: note: Function 'MQTTUnsubscribe' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTUnsubscribe(MQTTClient* client, const char* topicFilter);
+                                          ^
+MQTTClient-C/src/MQTTClient.c:573:33: note: Function 'MQTTUnsubscribe' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTUnsubscribe(MQTTClient* c, const char* topicFilter)
+                                ^
+MQTTClient-C/src/MQTTClient.c:617:29: style:inconclusive: Function 'MQTTPublish' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTPublish(MQTTClient* c, const char* topicName, MQTTMessage* message)
+                            ^
+MQTTClient-C/src/MQTTClient.h:168:39: note: Function 'MQTTPublish' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTPublish(MQTTClient* client, const char*, MQTTMessage*);
+                                      ^
+MQTTClient-C/src/MQTTClient.c:617:29: note: Function 'MQTTPublish' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTPublish(MQTTClient* c, const char* topicName, MQTTMessage* message)
+                            ^
+MQTTClient-C/src/MQTTClient.c:679:32: style:inconclusive: Function 'MQTTDisconnect' argument 1 names different: declaration 'client' definition 'c'. [funcArgNamesDifferent]
+int MQTTDisconnect(MQTTClient* c)
+                               ^
+MQTTClient-C/src/MQTTClient.h:206:42: note: Function 'MQTTDisconnect' argument 1 names different: declaration 'client' definition 'c'.
+DLLExport int MQTTDisconnect(MQTTClient* client);
+                                         ^
+MQTTClient-C/src/MQTTClient.c:679:32: note: Function 'MQTTDisconnect' argument 1 names different: declaration 'client' definition 'c'.
+int MQTTDisconnect(MQTTClient* c)
+                               ^
+MQTTClient-C/src/MQTTClient.c:139:17: style: Variable 'header.byte' is assigned a value that is never used. [unreadVariable]
+    header.byte = c->readbuf[0];
+                ^
+MQTTClient-C/src/MQTTClient.h:122:0: information: Skipping configuration 'MAX_MESSAGE_HANDLERS' since the value of 'MAX_MESSAGE_HANDLERS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    } messageHandlers[MAX_MESSAGE_HANDLERS];      /* Message handlers are indexed by subscription topic */
+^
+MQTTClient-C/src/MQTTClient.c:63:0: information: Skipping configuration 'MAX_MESSAGE_HANDLERS' since the value of 'MAX_MESSAGE_HANDLERS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    for (i = 0; i < MAX_MESSAGE_HANDLERS; ++i)
+^
+MQTTClient-C/src/MQTTClient.c:185:0: information: Skipping configuration 'MAX_MESSAGE_HANDLERS' since the value of 'MAX_MESSAGE_HANDLERS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    for (i = 0; i < MAX_MESSAGE_HANDLERS; ++i)
+^
+MQTTClient-C/src/MQTTClient.c:243:0: information: Skipping configuration 'MAX_MESSAGE_HANDLERS' since the value of 'MAX_MESSAGE_HANDLERS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    for (i = 0; i < MAX_MESSAGE_HANDLERS; ++i)
+^
+MQTTClient-C/src/MQTTClient.c:481:0: information: Skipping configuration 'MAX_MESSAGE_HANDLERS' since the value of 'MAX_MESSAGE_HANDLERS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    for (i = 0; i < MAX_MESSAGE_HANDLERS; ++i)
+^
+MQTTClient-C/src/MQTTClient.c:498:0: information: Skipping configuration 'MAX_MESSAGE_HANDLERS' since the value of 'MAX_MESSAGE_HANDLERS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            for (i = 0; i < MAX_MESSAGE_HANDLERS; ++i)
+^
+MQTTClient-C/src/MQTTClient.c:507:0: information: Skipping configuration 'MAX_MESSAGE_HANDLERS' since the value of 'MAX_MESSAGE_HANDLERS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (i < MAX_MESSAGE_HANDLERS)
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:55:6: style: The scope of the variable 'rc' can be reduced. [variableScope]
+ int rc = 0;
+     ^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:55:9: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ int rc = 0;
+        ^
+MQTTClient-C/test/test1.c:311:6: style: The scope of the variable 'rc' can be reduced. [variableScope]
+ int rc;
+     ^
+MQTTClient-C/test/test1.c:1023:9: style: Local variable 'tests' shadows outer variable [shadowVariable]
+  int (*tests[])() = {NULL, test1, test2, test3};
+        ^
+MQTTClient-C/test/test1.c:239:5: note: Shadowed declaration
+int tests = 0;
+    ^
+MQTTClient-C/test/test1.c:1023:9: note: Shadow variable
+  int (*tests[])() = {NULL, test1, test2, test3};
+        ^
+MQTTClient-C/test/test1.c:308:6: style: Unused variable: topicLen [unusedVariable]
+ int topicLen;
+     ^
+MQTTClient-C/test/test1.c:356:26: style: Unused variable: wopts [unusedVariable]
+  MQTTPacket_willOptions wopts;
+                         ^
+MQTTClient-C/test/test1.c:434:26: style: Unused variable: wopts [unusedVariable]
+  MQTTPacket_willOptions wopts;
+                         ^
+MQTTClient/samples/linux/main.cpp:30:5: warning: Member variable 'IPStack::mysock' is not initialized in the constructor. [uninitMemberVar]
+    IPStack()
+    ^
+MQTTClient/samples/linux/main.cpp:151:5: style: Class 'Countdown' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Countdown(int ms)
+    ^
+MQTTClient/samples/linux/main.cpp:264:8: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+    rc = client.publish(topic, &message);
+       ^
+MQTTClient/samples/linux/main.cpp:255:8: note: rc is assigned
+    rc = client.publish(topic, &message);
+       ^
+MQTTClient/samples/linux/main.cpp:264:8: note: rc is overwritten
+    rc = client.publish(topic, &message);
+       ^
+MQTTClient/samples/linux/main.cpp:272:8: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+    rc = client.publish(topic, &message);
+       ^
+MQTTClient/samples/linux/main.cpp:264:8: note: rc is assigned
+    rc = client.publish(topic, &message);
+       ^
+MQTTClient/samples/linux/main.cpp:272:8: note: rc is overwritten
+    rc = client.publish(topic, &message);
+       ^
+MQTTClient/samples/linux/main.cpp:276:8: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+    rc = client.unsubscribe(topic);
+       ^
+MQTTClient/samples/linux/main.cpp:272:8: note: rc is assigned
+    rc = client.publish(topic, &message);
+       ^
+MQTTClient/samples/linux/main.cpp:276:8: note: rc is overwritten
+    rc = client.unsubscribe(topic);
+       ^
+MQTTClient/samples/linux/main.cpp:87:13: style: Variable 'opt' is assigned a value that is never used. [unreadVariable]
+    int opt = 1;
+            ^
+MQTTClient/src/linux/linux.cpp:40:3: warning: Member variable 'IPStack::mysock' is not initialized in the constructor. [uninitMemberVar]
+  IPStack()
+  ^
+MQTTClient/src/linux/linux.cpp:164:3: style: Class 'Countdown' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+  Countdown(int ms)
+  ^
+MQTTClient/src/linux/linux.cpp:86:13: style: Variable 'opt' is assigned a value that is never used. [unreadVariable]
+    int opt = 1;
+            ^
+MQTTClient/test/test1.cpp:563:8: style: Redundant initialization for 'rc'. The initialized value is overwritten before it is read. [redundantInitialization]
+    rc = client.publish(test_topic, pubmsg);
+       ^
+MQTTClient/test/test1.cpp:552:12: note: rc is initialized
+    int rc = MQTT::FAILURE;
+           ^
+MQTTClient/test/test1.cpp:563:8: note: rc is overwritten
+    rc = client.publish(test_topic, pubmsg);
+       ^
+MQTTClient/test/test1.cpp:306:6: style: The scope of the variable 'rc' can be reduced. [variableScope]
+ int rc;
+     ^
+MQTTClient/test/test1.cpp:913:9: style: Local variable 'tests' shadows outer variable [shadowVariable]
+  int (*tests[])(Options) = {NULL, test1, test2, test3, /*test4, test5, test6, test6a*/};
+        ^
+MQTTClient/test/test1.cpp:234:5: note: Shadowed declaration
+int tests = 0;
+    ^
+MQTTClient/test/test1.cpp:913:9: note: Shadow variable
+  int (*tests[])(Options) = {NULL, test1, test2, test3, /*test4, test5, test6, test6a*/};
+        ^
+MQTTClient/test/test1.cpp:284:19: style: Variable 'm' can be declared with const [constVariable]
+   MQTT::Message &m = md.message;
+                  ^
+MQTTClient/test/test1.cpp:539:19: style: Variable 'm' can be declared with const [constVariable]
+   MQTT::Message &m = md.message;
+                  ^
+MQTTClient/test/test1.cpp:303:6: style: Unused variable: topicLen [unusedVariable]
+ int topicLen;
+     ^
+MQTTPacket/samples/baremetalserial/ping_nb.c:171:5: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/baremetalserial/pub0sub1_nb.c:149:20: style: Local variable 'msgid' shadows outer variable [shadowVariable]
+    unsigned short msgid;
+                   ^
+MQTTPacket/samples/baremetalserial/pub0sub1_nb.c:58:6: note: Shadowed declaration
+ int msgid = 1;
+     ^
+MQTTPacket/samples/baremetalserial/pub0sub1_nb.c:149:20: note: Shadow variable
+    unsigned short msgid;
+                   ^
+MQTTPacket/samples/baremetalserial/pub0sub1_nb.c:152:9: style: Local variable 'rc' shadows outer variable [shadowVariable]
+    int rc;
+        ^
+MQTTPacket/samples/baremetalserial/pub0sub1_nb.c:54:6: note: Shadowed declaration
+ int rc = 0;
+     ^
+MQTTPacket/samples/baremetalserial/pub0sub1_nb.c:152:9: note: Shadow variable
+    int rc;
+        ^
+MQTTPacket/samples/baremetalserial/pub0sub1_nb.c:189:5: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/ping.c:136:5: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/ping_nb.c:151:5: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/pub0sub1.c:147:5: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/pub0sub1.c:142:6: note: rc is assigned
+  rc = transport_sendPacketBuffer(mysock, buf, len);
+     ^
+MQTTPacket/samples/pub0sub1.c:147:5: note: rc is overwritten
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/pub0sub1.c:129:19: style: Local variable 'msgid' shadows outer variable [shadowVariable]
+   unsigned short msgid;
+                  ^
+MQTTPacket/samples/pub0sub1.c:52:6: note: Shadowed declaration
+ int msgid = 1;
+     ^
+MQTTPacket/samples/pub0sub1.c:129:19: note: Shadow variable
+   unsigned short msgid;
+                  ^
+MQTTPacket/samples/pub0sub1.c:132:8: style: Local variable 'rc' shadows outer variable [shadowVariable]
+   int rc;
+       ^
+MQTTPacket/samples/pub0sub1.c:48:6: note: Shadowed declaration
+ int rc = 0;
+     ^
+MQTTPacket/samples/pub0sub1.c:132:8: note: Shadow variable
+   int rc;
+       ^
+MQTTPacket/samples/pub0sub1.c:147:5: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/pub0sub1_nb.c:146:7: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc = transport_sendPacketBuffer(mysock, buf, len);
+      ^
+MQTTPacket/samples/pub0sub1_nb.c:141:7: note: rc is assigned
+   rc = MQTTDeserialize_publish(&dup, &qos, &retained, &msgid, &receivedTopic,
+      ^
+MQTTPacket/samples/pub0sub1_nb.c:146:7: note: rc is overwritten
+   rc = transport_sendPacketBuffer(mysock, buf, len);
+      ^
+MQTTPacket/samples/pub0sub1_nb.c:135:19: style: Local variable 'msgid' shadows outer variable [shadowVariable]
+   unsigned short msgid;
+                  ^
+MQTTPacket/samples/pub0sub1_nb.c:52:6: note: Shadowed declaration
+ int msgid = 1;
+     ^
+MQTTPacket/samples/pub0sub1_nb.c:135:19: note: Shadow variable
+   unsigned short msgid;
+                  ^
+MQTTPacket/samples/pub0sub1_nb.c:138:8: style: Local variable 'rc' shadows outer variable [shadowVariable]
+   int rc;
+       ^
+MQTTPacket/samples/pub0sub1_nb.c:48:6: note: Shadowed declaration
+ int rc = 0;
+     ^
+MQTTPacket/samples/pub0sub1_nb.c:138:8: note: Shadow variable
+   int rc;
+       ^
+MQTTPacket/samples/pub0sub1_nb.c:152:5: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+ rc = transport_sendPacketBuffer(mysock, buf, len);
+    ^
+MQTTPacket/samples/qos0pub.c:72:1: style: Label 'exit' is not used. [unusedLabel]
+exit:
+^
+MQTTPacket/samples/transport.c:201:5: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+ rc = recv(sock, NULL, (size_t)0, 0);
+    ^
+MQTTPacket/samples/transport.c:200:5: note: rc is assigned
+ rc = shutdown(sock, SHUT_WR);
+    ^
+MQTTPacket/samples/transport.c:201:5: note: rc is overwritten
+ rc = recv(sock, NULL, (size_t)0, 0);
+    ^
+MQTTPacket/samples/transport.c:202:5: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+ rc = close(sock);
+    ^
+MQTTPacket/samples/transport.c:201:5: note: rc is assigned
+ rc = recv(sock, NULL, (size_t)0, 0);
+    ^
+MQTTPacket/samples/transport.c:202:5: note: rc is overwritten
+ rc = close(sock);
+    ^
+MQTTPacket/samples/transport.c:147:0: information: Skipping configuration 'AF_INET6' since the value of 'AF_INET6' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (result->ai_family == AF_INET6)
+^
+MQTTPacket/samples/transport.c:150:0: information: Skipping configuration 'AF_INET6' since the value of 'AF_INET6' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   address6.sin6_family = family = AF_INET6;
+^
+MQTTPacket/samples/transport.c:71:0: information: Skipping configuration 'SOCKET_ERROR' since the value of 'SOCKET_ERROR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+static int mysock = INVALID_SOCKET;
+^
+MQTTPacket/samples/transport.c:187:0: information: Skipping configuration 'SOCKET_ERROR' since the value of 'SOCKET_ERROR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ if (mysock == INVALID_SOCKET)
+^
+MQTTPacket/src/MQTTConnectServer.c:98:24: style: Condition 'enddata-curdata<3' is always false [knownConditionTrueFalse]
+    (enddata - curdata < 3 || !readMQTTLenString(&data->password, &curdata, enddata)))
+                       ^
+MQTTPacket/src/MQTTConnectServer.c:95:26: note: Assuming condition 'enddata-curdata<3' is false
+   if (enddata - curdata < 3 || !readMQTTLenString(&data->username, &curdata, enddata))
+                         ^
+MQTTPacket/src/MQTTConnectServer.c:98:24: note: Condition 'enddata-curdata<3' is always false
+    (enddata - curdata < 3 || !readMQTTLenString(&data->password, &curdata, enddata)))
+                       ^
+MQTTPacket/src/MQTTDeserializePublish.c:37:69: style:inconclusive: Function 'MQTTDeserialize_publish' argument 9 names different: declaration 'len' definition 'buflen'. [funcArgNamesDifferent]
+  unsigned char** payload, int* payloadlen, unsigned char* buf, int buflen)
+                                                                    ^
+MQTTPacket/src/MQTTPublish.h:32:69: note: Function 'MQTTDeserialize_publish' argument 9 names different: declaration 'len' definition 'buflen'.
+  unsigned char** payload, int* payloadlen, unsigned char* buf, int len);
+                                                                    ^
+MQTTPacket/src/MQTTDeserializePublish.c:37:69: note: Function 'MQTTDeserialize_publish' argument 9 names different: declaration 'len' definition 'buflen'.
+  unsigned char** payload, int* payloadlen, unsigned char* buf, int buflen)
+                                                                    ^
+MQTTPacket/src/MQTTFormat.c:135:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_connack(strbuf, strbuflen, connack_rc, sessionPresent);
+            ^
+MQTTPacket/src/MQTTFormat.c:146:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_publish(strbuf, strbuflen, dup, qos, retained, packetid,
+            ^
+MQTTPacket/src/MQTTFormat.c:158:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_ack(strbuf, strbuflen, packettype, dup, packetid);
+            ^
+MQTTPacket/src/MQTTFormat.c:167:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_suback(strbuf, strbuflen, packetid, count, grantedQoSs);
+            ^
+MQTTPacket/src/MQTTFormat.c:174:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_ack(strbuf, strbuflen, UNSUBACK, 0, packetid);
+            ^
+MQTTPacket/src/MQTTFormat.c:180:12: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+  strindex = snprintf(strbuf, strbuflen, "%s", MQTTPacket_names[header.bits.type]);
+           ^
+MQTTPacket/src/MQTTFormat.c:204:11: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+  if ((rc = MQTTDeserialize_connect(&data, buf, buflen)) == 1)
+          ^
+MQTTPacket/src/MQTTFormat.c:205:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_connect(strbuf, strbuflen, &data);
+            ^
+MQTTPacket/src/MQTTFormat.c:216:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_publish(strbuf, strbuflen, dup, qos, retained, packetid,
+            ^
+MQTTPacket/src/MQTTFormat.c:228:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_ack(strbuf, strbuflen, packettype, dup, packetid);
+            ^
+MQTTPacket/src/MQTTFormat.c:240:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex = MQTTStringFormat_subscribe(strbuf, strbuflen, dup, packetid, count, topicFilters, requestedQoSs);;
+            ^
+MQTTPacket/src/MQTTFormat.c:250:13: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+   strindex =  MQTTStringFormat_unsubscribe(strbuf, strbuflen, dup, packetid, count, topicFilters);
+            ^
+MQTTPacket/src/MQTTFormat.c:256:12: style: Variable 'strindex' is assigned a value that is never used. [unreadVariable]
+  strindex = snprintf(strbuf, strbuflen, "%s", MQTTPacket_names[header.bits.type]);
+           ^
+MQTTPacket/src/MQTTPacket.c:260:44: style:inconclusive: Function 'MQTTPacket_equals' argument 2 names different: declaration 'b' definition 'bptr'. [funcArgNamesDifferent]
+int MQTTPacket_equals(MQTTString* a, char* bptr)
+                                           ^
+MQTTPacket/src/MQTTPacket.h:101:54: note: Function 'MQTTPacket_equals' argument 2 names different: declaration 'b' definition 'bptr'.
+DLLExport int MQTTPacket_equals(MQTTString* a, char* b);
+                                                     ^
+MQTTPacket/src/MQTTPacket.c:260:44: note: Function 'MQTTPacket_equals' argument 2 names different: declaration 'b' definition 'bptr'.
+int MQTTPacket_equals(MQTTString* a, char* bptr)
+                                           ^
+MQTTPacket/src/MQTTPacket.c:77:12: error: Uninitialized variable: c [uninitvar]
+ } while ((c & 128) != 0);
+           ^
+MQTTPacket/src/MQTTPacket.c:347:12: error: Uninitialized variable: c [uninitvar]
+ } while ((c & 128) != 0);
+           ^
+MQTTPacket/src/MQTTSerializePublish.c:104:69: style:inconclusive: Function 'MQTTSerialize_ack' argument 3 names different: declaration 'type' definition 'packettype'. [funcArgNamesDifferent]
+int MQTTSerialize_ack(unsigned char* buf, int buflen, unsigned char packettype, unsigned char dup, unsigned short packetid)
+                                                                    ^
+MQTTPacket/src/MQTTPacket.h:97:79: note: Function 'MQTTSerialize_ack' argument 3 names different: declaration 'type' definition 'packettype'.
+DLLExport int MQTTSerialize_ack(unsigned char* buf, int buflen, unsigned char type, unsigned char dup, unsigned short packetid);
+                                                                              ^
+MQTTPacket/src/MQTTSerializePublish.c:104:69: note: Function 'MQTTSerialize_ack' argument 3 names different: declaration 'type' definition 'packettype'.
+int MQTTSerialize_ack(unsigned char* buf, int buflen, unsigned char packettype, unsigned char dup, unsigned short packetid)
+                                                                    ^
+MQTTPacket/src/MQTTSubscribeClient.c:100:123: style:inconclusive: Function 'MQTTDeserialize_suback' argument 6 names different: declaration 'len' definition 'buflen'. [funcArgNamesDifferent]
+int MQTTDeserialize_suback(unsigned short* packetid, int maxcount, int* count, int grantedQoSs[], unsigned char* buf, int buflen)
+                                                                                                                          ^
+MQTTPacket/src/MQTTSubscribe.h:36:133: note: Function 'MQTTDeserialize_suback' argument 6 names different: declaration 'len' definition 'buflen'.
+DLLExport int MQTTDeserialize_suback(unsigned short* packetid, int maxcount, int* count, int grantedQoSs[], unsigned char* buf, int len);
+                                                                                                                                    ^
+MQTTPacket/src/MQTTSubscribeClient.c:100:123: note: Function 'MQTTDeserialize_suback' argument 6 names different: declaration 'len' definition 'buflen'.
+int MQTTDeserialize_suback(unsigned short* packetid, int maxcount, int* count, int grantedQoSs[], unsigned char* buf, int buflen)
+                                                                                                                          ^
+MQTTPacket/src/MQTTSubscribeServer.c:36:47: style:inconclusive: Function 'MQTTDeserialize_subscribe' argument 8 names different: declaration 'len' definition 'buflen'. [funcArgNamesDifferent]
+ int requestedQoSs[], unsigned char* buf, int buflen)
+                                              ^
+MQTTPacket/src/MQTTSubscribe.h:32:101: note: Function 'MQTTDeserialize_subscribe' argument 8 names different: declaration 'len' definition 'buflen'.
+  int maxcount, int* count, MQTTString topicFilters[], int requestedQoSs[], unsigned char* buf, int len);
+                                                                                                    ^
+MQTTPacket/src/MQTTSubscribeServer.c:36:47: note: Function 'MQTTDeserialize_subscribe' argument 8 names different: declaration 'len' definition 'buflen'.
+ int requestedQoSs[], unsigned char* buf, int buflen)
+                                              ^
+MQTTPacket/src/MQTTUnsubscribeClient.c:92:80: style:inconclusive: Function 'MQTTDeserialize_unsuback' argument 3 names different: declaration 'len' definition 'buflen'. [funcArgNamesDifferent]
+int MQTTDeserialize_unsuback(unsigned short* packetid, unsigned char* buf, int buflen)
+                                                                               ^
+MQTTPacket/src/MQTTUnsubscribe.h:36:90: note: Function 'MQTTDeserialize_unsuback' argument 3 names different: declaration 'len' definition 'buflen'.
+DLLExport int MQTTDeserialize_unsuback(unsigned short* packetid, unsigned char* buf, int len);
+                                                                                         ^
+MQTTPacket/src/MQTTUnsubscribeClient.c:92:80: note: Function 'MQTTDeserialize_unsuback' argument 3 names different: declaration 'len' definition 'buflen'.
+int MQTTDeserialize_unsuback(unsigned short* packetid, unsigned char* buf, int buflen)
+                                                                               ^
+MQTTPacket/src/MQTTUnsubscribeServer.c:34:83: style:inconclusive: Function 'MQTTDeserialize_unsubscribe' argument 3 names different: declaration 'max_count' definition 'maxcount'. [funcArgNamesDifferent]
+int MQTTDeserialize_unsubscribe(unsigned char* dup, unsigned short* packetid, int maxcount, int* count, MQTTString topicFilters[],
+                                                                                  ^
+MQTTPacket/src/MQTTUnsubscribe.h:31:93: note: Function 'MQTTDeserialize_unsubscribe' argument 3 names different: declaration 'max_count' definition 'maxcount'.
+DLLExport int MQTTDeserialize_unsubscribe(unsigned char* dup, unsigned short* packetid, int max_count, int* count, MQTTString topicFilters[],
+                                                                                            ^
+MQTTPacket/src/MQTTUnsubscribeServer.c:34:83: note: Function 'MQTTDeserialize_unsubscribe' argument 3 names different: declaration 'max_count' definition 'maxcount'.
+int MQTTDeserialize_unsubscribe(unsigned char* dup, unsigned short* packetid, int maxcount, int* count, MQTTString topicFilters[],
+                                                                                  ^
+MQTTPacket/test/test1.c:612:9: style: Local variable 'tests' shadows outer variable [shadowVariable]
+  int (*tests[])() = {NULL, test1, test2, test3, test4, test5, test6};
+        ^
+MQTTPacket/test/test1.c:205:5: note: Shadowed declaration
+int tests = 0;
+    ^
+MQTTPacket/test/test1.c:612:9: note: Shadow variable
+  int (*tests[])() = {NULL, test1, test2, test3, test4, test5, test6};
+        ^
+MQTTClient/samples/linux/main.cpp:27:1: error: The one definition rule is violated, different classes/structs have the same name 'IPStack' [ctuOneDefinitionRuleViolation]
+class IPStack
+^
+MQTTClient/src/linux/linux.cpp:37:1: note: The one definition rule is violated, different classes/structs have the same name 'IPStack'
+class IPStack
+^
+MQTTClient/samples/linux/main.cpp:27:1: note: The one definition rule is violated, different classes/structs have the same name 'IPStack'
+class IPStack
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:163:0: style: The function 'ConnectNetwork' is never used. [unusedFunction]
+
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:47:0: style: The function 'InitTimer' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTFormat.c:118:0: style: The function 'MQTTFormat_toClientString' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTFormat.c:188:0: style: The function 'MQTTFormat_toServerString' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTFormat.c:31:0: style: The function 'MQTTPacket_getName' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTSerializePublish.c:137:0: style: The function 'MQTTSerialize_puback' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTSerializePublish.c:164:0: style: The function 'MQTTSerialize_pubcomp' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTSerializePublish.c:151:0: style: The function 'MQTTSerialize_pubrel' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTUnsubscribeServer.c:76:0: style: The function 'MQTTSerialize_unsuback' is never used. [unusedFunction]
+
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:97:0: style: The function 'NewNetwork' is never used. [unusedFunction]
+
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:104:0: style: The function 'TLSConnectNetwork' is never used. [unusedFunction]
+
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:36:0: style: The function 'countdown' is never used. [unusedFunction]
+
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:25:0: style: The function 'expired' is never used. [unusedFunction]
+
+^
+MQTTPacket/src/MQTTPacket.c:187:0: style: The function 'getLenStringLen' is never used. [unusedFunction]
+
+^
+MQTTClient-C/src/cc3200/MQTTCC3200.c:41:0: style: The function 'left_ms' is never used. [unusedFunction]
+
+^
+MQTTClient-C/samples/FreeRTOS/MQTTEcho.c:82:0: style: The function 'vStartMQTTTasks' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
